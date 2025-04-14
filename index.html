@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="icon" type="image/png" href="image/logo.jpg">
+    <link rel="stylesheet" href="style.CSS">
+    <script src="https://kit.fontawesome.com/99356a6351.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>College Student</p>
+                <h1>Hi, I'm <span>Mc</span><br>Lawrence Limuaco</h1>
+                <h2>Have a little Scroll on my portfolio website</h2>
+            </div>
+        </div>
+    </div>
+    <!-------------about-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/profile2.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="paragraph">Good Day! I'm Mc Lawrence Limuaco. I am a seconnd year Bachelor of Science in Information Technology Student major in Web and game development at Pamantasan ng Lungsod ng San Pablo. I am a Filipino citizen and have been here in the Philippines since I was born. I grew up in the province of Laguna, Municipality of Rizal Where I attended elementary and Middle school. My hobbies is to Play Online Games, Watch Anime/Movies and something random on Social Media, Read Manga/Manhwa/Light Novels, Listen to music and sometimes I play guitar. I have an interest on gaming, technologies, and Music. My Passion is all about Gaming and Computer related.</p>
+
+                    <br>
+                
+
+                    <div class="tab-titles">
+                        <br>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experiece')">Experiece</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <br>
+                            <li><span>B</span>asic HTML, CSS, JavaScript, and C#</li>
+                            <li><span>P</span>oblem Solving</li>
+                            <li><span>A</span>nalytical Skill</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiece">
+                        <ul>
+                            <br>
+                            <li><span>N</span>o Experience</li>
+                            <li><span>S</span>till learning</li>
+                            <li><span>C</span>urrently at 2nd year College</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <br>
+                            <li><span>2023-Present </span>College at Pamantasan Ng LungSod Ng San Pablo</li>
+                            <li><span>2017-2023 </span>Secondary at Cristobal S. Conducto Memorial Integrated National High School</li>
+                            <li><span>2011-2017 </span>Elementary at Rizal Elementary School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------Tools-------------->
+    <div id="tools">
+        <div class="container">
+            <h1 class="sub-title">Tools I used to Create this Website</h1>
+            <div class="tools-list">
+                
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>HTML</h2>
+                    <p>I used this language for the structure of this website.</p>
+                    <a href="https://www.w3schools.com/html/default.asp">Learn more about HTML</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-brush"></i>
+                    <h2>CSS</h2>
+                    <p>I used this language for the design of this website</p>
+                    <a href="https://www.w3schools.com/css/default.asp">Learn more about CSS</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-computer-mouse"></i>
+                    <h2>JavaScript</h2>
+                    <p>I used this language for the interactive features of this webite</p>
+                    <a href="https://www.w3schools.com/js/default.asp">Learn more about JavaScript</a>
+                </div>
+            </div>
+        </div>
+    </div>
+       <!-------------Contacts-------------->
+       <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope"></i>mcmclimuaco0@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>09935400108/09163468176</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/limuacoii"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://x.com/lawrencelimuaco"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+                            <a href="https://www.instagram.com/mclawrence_limuaco/"><i class="fa-brands fa-instagram"></i></i></a>
+                        </div>
+                        
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Emial" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="Submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+
+
+
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwf4E7CqvgrWYJVHVfi2SezECPa3gzGlGGQZaJUiErYyUjv2rU7_nSe9yFxOylGCKnvPg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
